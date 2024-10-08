@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
       - name: Add remote 
         env:
-          HF: ${{secrets.  }}
+          HF: ${{secrets.HF_TOKEN}}
           HFUSER: ${{secrets.HF_USERNAME }}
         run: git remote add space https://$HFUSER:$HF@huggingface.co/spaces/$HFUSER/Image_Processing_OpenCV
       - name: Push to hub
