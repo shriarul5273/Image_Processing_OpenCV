@@ -4,8 +4,6 @@ from PIL import Image
 from skimage.util import random_noise
 import cv2
 
-# Assuming ImageSlider is a custom or extended component of Gradio
-from gradio_imageslider import ImageSlider
 
 # Function to add noise to the image
 def add_noise(image, noise_type, mean=0, var=0.01, amount=0.05, salt_vs_pepper=0.5):
