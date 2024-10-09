@@ -165,6 +165,8 @@ with gr.Blocks() as demo:
         edge_operation.change(fn=on_edge_operation_change, inputs=edge_operation, outputs=[min_val_slider, max_val_slider, kernel_size_slider])
         apply_edge_button.click(fn=apply_edge_detection, inputs=[edge_img_input, min_val_slider, max_val_slider, edge_operation, kernel_size_slider], outputs=edge_img_output)
 
+    gr.Markdown("### To transfer the image to another tab for further processing, select the source and destination tabs and click the Transfer Image button.")
+    
     # ---- DYNAMIC TRANSFER BUTTON ----
     with gr.Row():
         source_tab_dropdown = gr.Dropdown(tab_names, label="Transfer From Tab")
@@ -197,5 +199,6 @@ with gr.Blocks() as demo:
         outputs=[img_input, denoise_img_input, morph_img_input, edge_img_input]
     )
 
+    gr.Markdown("### examples image and docx comming soon")
 # Launch the Gradio interface
 demo.launch()
