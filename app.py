@@ -199,6 +199,12 @@ with gr.Blocks() as demo:
         outputs=[img_input, denoise_img_input, morph_img_input, edge_img_input]
     )
 
-    gr.Markdown("### examples image and docx comming soon")
+    gr.Markdown("""
+    ### Transfer Image Instructions:
+    - **Select Source Tab**: Choose the tab from which you want to transfer the image (e.g., Add Noise, Remove Noise, Morphological Operations, Edge Detection).
+    - **Select Destination Tab**: Choose the tab where you want to send the image.
+    - **Click Transfer Image**: After selecting the source and destination, click the "Transfer Image" button to move the image to the selected tab.
+    - **Note**: If the source tab has no processed image, the input image will be transferred instead.
+    """)
 # Launch the Gradio interface
 demo.launch()
